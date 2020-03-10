@@ -23,13 +23,20 @@ def calcPagePrior(train_df, valid_df):
     
     return priors
 
-def calcAccuracy_fullpage(learner, path, train_df, valid_df, test_df, ensembled = False):
+def calcAccuracy_fullpage(learner, path, train_df, valid_df, test_df, databunch = None, ensembled = False):
     
     # batch inference
-    learner.export()
-    learner = load_learner(path, test=TextList.from_df(test_df, path, cols='text'))
-    probs, y = learner.get_preds(ds_type=DatasetType.Test, ordered=True)
-
+    if databunch is None: # RNNLearner (AWD-LSTM)
+        learner.export()
+        learner = load_learner(path, test=TextList.from_df(test_df, path, cols='text'))
+        probs, y = learner.get_preds(ds_type=DatasetType.Test, ordered=True) 
+    else: # Generic Learner (RoBERTa, GPT-2)
+        learner = Learner(databunch, learner.model)
+        probs = learner.get_preds(ds_type=DatasetType.Test)[0].detach().cpu() # not sorted
+        sampler = [i for i in databunch.dl(DatasetType.Test).sampler]
+        reverse_sampler = np.argsort(sampler)
+        probs = probs[reverse_sampler, :]
+    
     # ground truth labels
     labels = list(test_df['label'])
     composers = sorted(set(labels))
