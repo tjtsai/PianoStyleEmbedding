@@ -55,8 +55,12 @@ def calcAccuracy_fullpage(learner, path, train_df, valid_df, test_df, databunch 
     # calc accuracy
     acc = accuracy(probs, gt).item()
     acc_with_prior = accuracy(probs_with_priors, gt).item()
+
+    # calc macroF1
+    f1 = macroF1(probs, gt)
+    f1_with_prior = macroF1(probs_with_priors, gt)
     
-    return acc, acc_with_prior
+    return (acc, acc_with_prior), (f1, f1_with_prior)
 
 def getPageBoundaries(df):
     queryids = list(df['id'])
@@ -76,3 +80,21 @@ def averageEnsembled(probs, gt, boundaries):
             next_bnd = boundaries[i+1]
             accum[i,:] = torch.sum(probs[bnd:next_bnd,:], axis=0)
     return accum, gt_selected
+
+def macroF1(probs, gt, eps = 1e-9):
+    probs = probs.numpy()
+    preds = np.argmax(probs, axis=1)
+    gt = gt.numpy()
+    cm = calcConfusionMatrix(preds, gt, probs.shape[1])
+    rec = np.diag(cm) / np.sum(cm, axis=1)
+    prec = np.diag(cm) / np.sum(cm, axis=0)
+    F1scores = 2 * prec * rec / (prec + rec + eps)
+    macro = np.average(F1scores)
+    return macro
+
+def calcConfusionMatrix(preds, gt, nclasses):
+    cm = np.zeros((nclasses,nclasses))
+    np.add.at(cm, (gt, preds), 1)
+    return cm
+
+    
