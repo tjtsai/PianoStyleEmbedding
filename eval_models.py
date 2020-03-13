@@ -86,8 +86,8 @@ def macroF1(probs, gt, eps = 1e-9):
     preds = np.argmax(probs, axis=1)
     gt = gt.numpy()
     cm = calcConfusionMatrix(preds, gt, probs.shape[1])
-    rec = np.diag(cm) / np.sum(cm, axis=1)
-    prec = np.diag(cm) / np.sum(cm, axis=0)
+    rec = np.diag(cm) / (np.sum(cm, axis=1) + eps)
+    prec = np.diag(cm) / (np.sum(cm, axis=0) + eps)
     F1scores = 2 * prec * rec / (prec + rec + eps)
     macro = np.average(F1scores)
     return macro
@@ -96,5 +96,3 @@ def calcConfusionMatrix(preds, gt, nclasses):
     cm = np.zeros((nclasses,nclasses))
     np.add.at(cm, (gt, preds), 1)
     return cm
-
-    
