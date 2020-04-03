@@ -1,4 +1,4 @@
-name: PianoStyleEmbedding2
+name: PianoStyleEmbedding
 channels:
   - pytorch
   - fastai
