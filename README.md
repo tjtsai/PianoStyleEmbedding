@@ -4,8 +4,8 @@ This repository contains the code for the ISMIR 2020 paper "Composer Style Class
 
 The goal of this project is to predict the composer of an unseen page (image) of piano sheet music.
 
-You can find the paper [here](http://pages.hmc.edu/ttsai/assets/PianoStyleClassification_ismir2020.pdf).
+You can find the paper [here](https://drive.google.com/file/d/19jHQnAE8dCCFqy0un7W4HG2yvb4_gwgx/view?usp=sharing).
 
 ## Citation
 
-TJ Tsai and Kevin Ji. "Composer Style Classification of Piano Sheet Music Images Using Language Model Pretraining" in Proceedings of the International Society for Music Information Retrieval Conference, 2020.
+TJ Tsai and Kevin Ji. "Composer Style Classification of Piano Sheet Music Images Using Language Model Pretraining" in Proceedings of the International Society for Music Information Retrieval Conference, 2020, pp. 176-183.
