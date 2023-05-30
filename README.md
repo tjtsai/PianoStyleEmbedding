@@ -28,7 +28,7 @@ Notes for specific notebooks are included below:
     - this notebook requires a *paid* imslp account to use. Without one it will not throw an error, but will just download empty PDFs that cause future notebooks to fail
 - 01_extractFeatures
     - this notebook uses ImageMagick to convert PDFs to images. This process is very innefficient (it takes hours and uses up 100s of GB of disk space). There are instructions on how to change the temp storage directory in the notebook.
-    - Here are instructions on how to [install](https://sites.google.com/g.hmc.edu/mir-lab-wiki/faq/install-imagemagick-locally?authuser=0) and [debug](https://sites.google.com/g.hmc.edu/mir-lab-wiki/faq/converting-pdfs-to-pngs-with-imagemagick?authuser=0) 
+    - Here are instructions on how to [install](https://sites.google.com/g.hmc.edu/mir-lab-wiki/faq/install-imagemagick-locally?authuser=0) and [debug](https://sites.google.com/g.hmc.edu/mir-lab-wiki/faq/converting-pdfs-to-pngs-with-imagemagick?authuser=0) ImageMagik
     - For future projects, we have switched to Ghostscript which is much faster and more efficient (https://sites.google.com/g.hmc.edu/mir-lab-wiki/faq/converting-pdfs-to-pngs-with-ghostscript?authuser=0)
 - 04_roberta_lm
     - this should be run before any other of the 04 notebooks. It trains and saves the model that they use
