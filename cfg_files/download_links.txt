@@ -517,7 +517,6 @@ data/pdf/Liszt/302236.pdf http://imslp.org/wiki/Special:IMSLPDisclaimerAccept/30
 data/pdf/Liszt/13655.pdf http://imslp.org/wiki/Special:IMSLPDisclaimerAccept/13655
 data/pdf/Liszt/04682.pdf http://imslp.org/wiki/Special:IMSLPDisclaimerAccept/04682
 data/pdf/Liszt/493810.pdf http://imslp.org/wiki/Special:IMSLPDisclaimerAccept/493810
-data/pdf/Liszt/04478.pdf http://imslp.org/wiki/Special:IMSLPDisclaimerAccept/04478
 data/pdf/Liszt/169931.pdf http://imslp.org/wiki/Special:IMSLPDisclaimerAccept/169931
 data/pdf/Liszt/160408.pdf http://imslp.org/wiki/Special:IMSLPDisclaimerAccept/160408
 data/pdf/Liszt/77320.pdf http://imslp.org/wiki/Special:IMSLPDisclaimerAccept/77320
