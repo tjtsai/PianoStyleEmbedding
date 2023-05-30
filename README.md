@@ -33,7 +33,7 @@ Notes for specific notebooks are included below:
 - 04_roberta_lm
     - this should be run before any other of the 04 notebooks. It trains and saves the model that they use
 - 05_gpt2_lm
-    - this should be run before any other of the 04 notebooks. It trains and saves the model that they use
+    - this should be run before any other of the 05 notebooks. It trains and saves the model that they use
 
 ## Citation
 
