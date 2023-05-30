@@ -4,7 +4,7 @@ This repository contains the code for the ISMIR 2020 paper "Composer Style Class
 
 The goal of this project is to predict the composer of an unseen page (image) of piano sheet music.
 
-You can find the paper [here](https://drive.google.com/file/d/19jHQnAE8dCCFqy0un7W4HG2yvb4_gwgx/view?usp=sharing).
+You can find the paper [here](https://drive.google.com/file/d/19jHQnAE8dCCFqy0un7W4HG2yvb4_gwgx/view?usp=sharing) and the pretrained models [here](https://drive.google.com/drive/folders/1Y-u3p8z5blISM06U7TXZaLLu52opoND_).
 
 ## Citation
 
