@@ -2,3 +2,5 @@
 data/*
 score_feat/*
 *~
+__pycache__
+imslp_bscores.list
