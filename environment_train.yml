@@ -10,7 +10,8 @@ dependencies:
   - python >=3.7,<3.8
   - beautifulsoup4=4.8.1
   - requests=2.22.0
-  - fastai=1.0.59 
+  - fastai=1.0.59
+  - conda-forge::pytorch
   - scikit-learn=0.24.2
   - plotnine=0.7.1
   - ipykernel
