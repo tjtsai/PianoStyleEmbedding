@@ -20,4 +20,4 @@ dependencies:
   - tensorboardx=2.5
   - regex=2022.9.13
   - pip:
-    - tokenizers=0.5.2
+    - tokenizers==0.5.2
