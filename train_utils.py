@@ -179,10 +179,8 @@ def plotLosses(logfile):
     
     # plot
     step, tr_loss, val_loss = np.array(step), np.array(tr_loss), np.array(val_loss)
-    plt.plot(step, tr_loss, 'b-')
-    plt.scatter(step, tr_loss, c='b')
-    plt.plot(step, val_loss, 'g-')
-    plt.scatter(step, val_loss, c='g')
+    plt.plot(step, tr_loss, c='b', marker='.')
+    plt.plot(step, val_loss, c='g', marker='.')
     plt.legend(['train','valid'])
     plt.xlabel('Steps')
     plt.ylabel('Loss')
